@@ -156,7 +156,7 @@ void SelectSearch(string select1)
       ExpectedStatus = 0;
   }
   for(auto i:tasks){
-    if(DateSymbol == ' '){
+    if(DateSymbol == ' ') {
       size_t describator = i.description.find(ExpectedDescription);
       if((i.category == ExpectedCategory || ExpectedCategory == "") && describator != string::npos && (i.done == ExpectedStatus || ExpectedStatus == -1)) {
         cout << "Name: " << i.name << endl;
@@ -165,7 +165,7 @@ void SelectSearch(string select1)
         cout << "Data: " << i.data  << endl;
       }
     }
-    else if(DateSymbol == '<'){
+    else if(DateSymbol == '<') {
       size_t describator = i.description.find(ExpectedDescription);
       if(i.data < ExpectedDate && (i.category == ExpectedCategory || ExpectedCategory == "") && describator != string::npos && (i.done == ExpectedStatus || ExpectedStatus == -1)) {
         cout << "Name: " << i.name << endl;
@@ -174,7 +174,7 @@ void SelectSearch(string select1)
         cout << "Data: " << i.data  << endl;
       }
     }
-    else if(DateSymbol == '>'){
+    else if(DateSymbol == '>') {
       size_t describator = i.description.find(ExpectedDescription);
       if(i.data > ExpectedDate && (i.category == ExpectedCategory || ExpectedCategory == "") && describator != string::npos && (i.done == ExpectedStatus || ExpectedStatus == -1)) {
         cout << "Name: " << i.name << endl;
